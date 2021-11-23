@@ -455,7 +455,6 @@ export class Combobox extends FormAssociatedCombobox {
     protected placeholderChanged(): void;
     position: SelectPosition;
     positionAttribute: SelectPosition;
-    role: SelectRole;
     // @internal
     selectedIndexChanged(prev: number, next: number): void;
     // @internal
@@ -1344,7 +1343,6 @@ export abstract class Listbox extends FoundationElement {
     set options(value: ListboxOption[]);
     // @internal
     protected _options: ListboxOption[];
-    role: string;
     selectedIndex: number;
     // @internal
     selectedIndexChanged(prev: number, next: number): void;
@@ -1440,12 +1438,6 @@ export type ListboxOptionOptions = FoundationElementDefinition & StartEndOptions
 
 // @public
 export const listboxOptionTemplate: (context: ElementDefinitionContext, definition: ListboxOptionOptions) => ViewTemplate<ListboxOption>;
-
-// @public
-export enum ListboxRole {
-    // (undocumented)
-    listbox = "listbox"
-}
 
 // @public
 export const listboxTemplate: FoundationElementTemplate<ViewTemplate<ListboxElement>>;
@@ -2044,7 +2036,6 @@ export class Select extends FormAssociatedSelect {
     protected openChanged(): void;
     position: SelectPosition;
     positionAttribute: SelectPosition;
-    role: SelectRole;
     // @internal
     selectedIndexChanged(prev: any, next: any): void;
     setPositioning(): void;
@@ -2069,12 +2060,6 @@ export enum SelectPosition {
     above = "above",
     // (undocumented)
     below = "below"
-}
-
-// @public
-export enum SelectRole {
-    // (undocumented)
-    combobox = "combobox"
 }
 
 // @public
